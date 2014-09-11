@@ -74,7 +74,7 @@ We next plot a histogram for the total number of steps per day.
 hist(stepsPerDay$totalSteps, main = "Total Number of Steps per Day", xlab = "Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+![plot of chunk totalstepsperday](figure/totalstepsperday.png) 
 
 Using _summary_ produces the mean and median of the total number of steps per day:
 
@@ -112,7 +112,7 @@ at <- sapply(labels, function(z) which(stepsPerInterval$interval == z))
 axis(1, at = at, labels = labels)
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk dailypattern_merged](figure/dailypattern_merged.png) 
 
 The following line of code finds (and prints) the interval for which the average number of steps is highest:
 
@@ -212,6 +212,6 @@ plot(subset(stepsPerInterval2, weekend == TRUE)$meanSteps, xlab = "interval", yl
 axis(1, at = at, labels = labels)
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
+![plot of chunk dailypattern_separated](figure/dailypattern_separated.png) 
 
 The plots suggest that the activity pattern is indeed different for weekends than weekdays: For weekdays, activity reaches a clear peak in the morning hours around 8.30, and drops sharply thereafter. For weekends, activity is _more_ evenly distributed during daytime (ca. 8.00 - 19.00). As a common feature of both weedays and weekends, the plots show that activity is almost zero at night (0.00 - 6.00), which seems plausible. 
