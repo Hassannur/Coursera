@@ -146,9 +146,9 @@ Make plot
 ```{r dailypattern_separated}
 par(mfrow = c(1, 2))
 # First plot
-plot(subset(stepsPerInterval2, weekend == FALSE)$meanSteps, xlab = "interval", ylab = "mean nr. of steps", type = "l", xaxt = "n")
+plot(subset(stepsPerInterval2, weekend == FALSE)$meanSteps, xlab = "interval", ylab = "mean nr. of steps", type = "l", xaxt = "n", ylim = c(0, 250))
 axis(1, at = at, labels = labels)
-plot(subset(stepsPerInterval2, weekend == TRUE)$meanSteps, xlab = "interval", ylab = "mean nr. of steps", type = "l", xaxt = "n")
+plot(subset(stepsPerInterval2, weekend == TRUE)$meanSteps, xlab = "interval", ylab = "mean nr. of steps", type = "l", xaxt = "n", ylim = c(0, 250))
 axis(1, at = at, labels = labels)
 ```
 
